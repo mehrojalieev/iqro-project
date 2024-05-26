@@ -1,0 +1,38 @@
+.navbar-header{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+}
+.search-form{
+    max-width: 334px;
+    width: 100%;
+}
+.navbar-action{
+    display: flex;
+    align-items: center;
+    column-gap: 20px;
+    .email-icon{
+        font-size: 22px;
+        color: var(--secondary-dark-color);
+    }
+    .badge{
+        font-size: 20px !important;
+        .ant-scroll-number-only-unit{
+            color: var(--light-color) !important;
+        }
+        .ant-badge-count{
+            font-size: 12px !important;
+            background-color: var(--purple-light-color);
+        }
+        span{
+            color: var(--secondary-dark-color);
+        }
+    }
+    .avatar{
+        width: 25px;
+        aspect-ratio: 1/1;
+        object-fit: cover;
+        border-radius: 50%;
+    }
+}
