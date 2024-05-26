@@ -1,0 +1,31 @@
+.performance{
+    max-width: 650px;
+    width: 100%;
+}
+.performance-header{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    .header-title{
+        font-size: 20px;
+        font-family: 700;
+        color: var(--purple-dark-color);
+    }
+    .header-subtitle{
+        color: #5A5881;
+        font-size: 14px;
+        font-weight: 700;
+    }
+}
+
+.performance__chart-container{
+    width: 100%;
+    margin-top: 1rem;
+    height: 294px;
+    canvas{
+        width: 100% !important;
+        border-radius: 14px !important  ;
+        background-color: var(--light-color) !important;
+    }
+}
