@@ -22,10 +22,87 @@
 .performance__chart-container{
     width: 100%;
     margin-top: 1rem;
-    height: 294px;
+    
     canvas{
         width: 100% !important;
+        height: 280px !important;
         border-radius: 14px !important  ;
         background-color: var(--light-color) !important;
     }
 }
+
+
+
+
+@media only screen and (max-width:1036px){
+    .performance{
+        max-width: 480px !important;
+    }
+.performance__chart-container{
+    canvas{
+        height: 240px !important;
+    }
+}
+}
+
+@media only screen and (max-width:980px){
+    .performance{
+        max-width: 100% !important;
+    }
+    .performance-header{
+        .header-title{
+            font-size: 26px;
+        }
+        .header-subtitle{
+            font-size: 16px;
+        }
+    }
+.performance__chart-container{
+    canvas{
+        height: 330px !important;
+    }
+}
+}
+
+
+@media only screen and (max-width:760px){
+    .performance-header{
+        .header-title{
+            font-size: 24px;
+        }
+        .header-subtitle{
+            font-size: 15px;
+        }
+    }
+    .performance__chart-container canvas{
+            height: 270px !important;
+    }
+}
+@media only screen and (max-width:642px){
+    .performance-header{
+        .header-title{
+            font-size: 22px;
+        }
+        .header-subtitle{
+            font-size: 15px;
+        }
+    }
+    .performance__chart-container canvas{
+            height: 250px !important;
+    }
+}
+@media only screen and (max-width:542px){
+    .performance-header{
+        .header-title{
+            font-size: 20px;
+        }
+        .header-subtitle{
+            font-size: 14px;
+        }
+    }
+    .performance__chart-container canvas{
+            height: 230px !important;
+    }
+}
+
+

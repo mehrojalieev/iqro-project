@@ -9,7 +9,7 @@ import { Progress } from "antd"
 const DailyOverview = () => {
 
 
-    interface CardType  {
+    interface CardType  {   
         icon: string,
         title: string,
         count: string,

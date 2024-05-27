@@ -1,10 +1,21 @@
 import "./Performance.scss"
 import { Line } from "react-chartjs-2"
 import { Chart, LineElement, CategoryScale, LinearScale, PointElement, Legend, Tooltip } from 'chart.js'
+import { useEffect, useRef } from "react"
 
 Chart.register(LineElement, CategoryScale, LinearScale, PointElement, Legend, Tooltip)
 
 const Performance = () => {
+
+    const chartLine: any = useRef(null)
+
+    useEffect(() => {
+        const ctx = chartLine.current?.chartInstance?.ctx;
+        if(ctx){
+            ctx.shadowColor = '#000';
+            ctx.shadowBlur = 10
+        }
+    }, [])
 
     const chartData = {
         labels: ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'],
@@ -46,9 +57,9 @@ const Performance = () => {
 
 
     const options: Option = {
-        plugins: {
-            legend: true
-        },
+        // plugins: {
+        //     legend: true
+        // },
         
         scales: {
             x: {
@@ -66,6 +77,23 @@ const Performance = () => {
             },
         },
     }
+    const myPlugin = {
+        id: 'customShadow',
+        beforeDraw: (chart: any) => {
+          const ctx = chart.ctx;
+          ctx.save();
+          const originalLineDraw = ctx.stroke;
+          ctx.stroke = function () {
+            ctx.save();
+            ctx.shadowColor = '#a498ffe8';
+            ctx.shadowBlur = 8;
+            ctx.shadowOffsetX = 2;
+            ctx.shadowOffsetY = 10;
+            originalLineDraw.apply(this, arguments);
+            ctx.restore();
+          };
+        }
+      };
 
     return (
         <div className="performance">
@@ -75,10 +103,11 @@ const Performance = () => {
             </div>
             <div className="performance__chart-container">
                 {/* <Line  data={chartData} options={options as option}> */}
-                <Line
+                <Line ref={chartLine}
                     redraw={false}
                     updateMode="none"
                     data={chartData}
+                    plugins={[myPlugin]}
                     options={options as any}
                 >
 

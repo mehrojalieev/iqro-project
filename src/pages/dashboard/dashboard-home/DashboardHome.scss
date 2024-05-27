@@ -3,3 +3,9 @@
     grid-template-columns: repeat(2, 1fr);
     gap: 30px;
 }
+
+@media only screen and (max-width:980px){
+    .content__main-wrapper{
+        grid-template-columns: 1fr;
+    }
+}
