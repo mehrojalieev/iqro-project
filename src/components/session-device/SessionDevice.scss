@@ -1,0 +1,57 @@
+.session-device{
+    width: 100%;
+    max-width: 514px;
+
+}
+.session__device-header{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    h3{
+        font-size: 20px;
+        font-weight: 700;
+        color: var(--purple-dark-color);
+    }
+    p{
+        color: #5A5881;
+        font-size: 14px;
+        font-weight: 700;
+    }   
+}
+.session-card{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    background-color: var(--light-color);
+    width: 100%;
+    margin-top: 1rem;
+    padding: 35px 50px;
+    border-radius: 10px;
+    .session-image{
+        max-width: 174px;
+        width: 100%;
+        aspect-ratio: 1/1;
+    }
+}
+
+.session__card-content{
+    .content-item{
+        margin-top: 20px;
+        p{
+            font-size: 14px;
+            font-weight: 700;
+            color: #5A5881;
+        }
+        h6{
+            margin-top: 10px;
+            font-size: 18px;
+            font-weight: 500;
+            sub{
+                margin-left: 4px;
+                font-size: 13px;
+                font-weight: 500;
+                color: #5A5881;
+            }
+        }
+    }
+}
