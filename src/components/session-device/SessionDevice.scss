@@ -22,6 +22,7 @@
     display: flex;
     align-items: center;
     justify-content: space-around;
+    column-gap: 1rem;
     background-color: var(--light-color);
     width: 100%;
     margin-top: 1rem;
@@ -56,3 +57,165 @@
     }
 }
 
+
+
+// RESPONSIVE STYLES
+@media only screen and (max-width:1036px){
+    .session-card{
+        padding: 25px 20px;
+        .session-image{
+            max-width: 150px;
+        }
+    }
+    .session__card-content{
+        .content-item{
+            margin-top: 20px;
+            p{
+                font-size: 13px;
+            }
+            h6{
+                margin-top: 4px;
+                font-size: 16px;
+                sub{
+                    margin-left: 4px;
+                    font-size: 12px;
+                }
+            }
+        }
+    }
+}
+
+
+@media only screen and (max-width:980px){
+    .session-device{
+        margin-top: 2rem;
+    }
+    .session__device-header{
+        h3{
+            font-size: 24px;
+        }
+        p{
+            font-size: 16px;
+        }   
+    }
+    .session-card{
+        padding: 25px 20px;
+        .session-image{
+            max-width: 220px;
+        }
+    }
+    .session__card-content{
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 1.2rem 2.5rem;
+        max-width: 200px;
+        width: 100%;
+        .content-item{
+            margin-top: 20px;
+            p{
+                font-size: 16px;
+            }
+            h6{
+                margin-top: 4px;
+                font-size: 20px;
+                sub{
+                    margin-left: 4px;
+                    font-size: 13px;
+                }
+            }
+        }
+    }
+}
+
+
+@media only screen and (max-width:760px){
+    .session-card{
+        flex-direction: column;
+        align-items: center;
+    }
+    .session__device-header{
+        h3{
+            font-size: 22px;
+        }
+        p{
+            font-size: 15px;
+            text-transform: capitalize;
+        }   
+    }
+    .session-card{
+        padding: 15px 10px;
+        .session-image{
+            max-width: 190px;
+        }
+    }
+    .session__card-content{
+        margin-top: 2.5rem;
+        display: flex;
+        align-items: center;
+        justify-content: space-evenly;
+        column-gap: 1.5rem !important;
+        max-width: 100%;
+        width: 100%;
+        .content-item{
+            margin-top: 8px;
+            p{
+                font-size: 16px;
+            }
+            h6{
+                margin-top: 6px;
+                font-size:20px;
+                sub{
+                    font-size: 13px;
+                }
+            }
+        }
+    }
+}
+@media only screen and (max-width:662px){
+    .session__device-header{
+        h3{
+            font-size: 20px;
+        }
+        p{
+            font-size: 15px;
+        }   
+    }
+  
+}
+
+@media only screen and (max-width:542px){
+  
+    .session__device-header{
+        h3{
+            font-size: 20px;
+        }
+        p{
+            font-size: 15px;
+        }   
+    }
+    .session-card{
+        padding: 15px 10px;
+        .session-image{
+            max-width: 170px;
+        }
+    }
+    .session__card-content{
+        margin-top: 2.5rem;
+        column-gap: 1.5rem !important;
+        max-width: 100%;
+        width: 100%;
+        .content-item{
+            margin-top: 8px;
+            p{
+                font-size: 15px;
+            }
+            h6{
+                margin-top: 6px;
+                font-size:18px;
+                sub{
+                    font-size: 12px;
+                }
+            }
+        }
+    }
+}

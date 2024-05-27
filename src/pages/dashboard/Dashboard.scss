@@ -12,3 +12,15 @@
 .content__main-wrapper{
     margin-top: 40px;
 }
+
+@media only screen and (max-width:760px){
+    .dashboard{
+        column-gap: 3px;
+    }
+}
+@media only screen and (max-width:662px){
+  .dashboard-content{
+    padding-bottom: 6.5rem !important;
+  }
+}
+

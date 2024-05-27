@@ -32,6 +32,7 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
+    column-gap: 10px;
     margin-top: 20px;
    
     p{
@@ -82,10 +83,74 @@
         border: none;
         border-radius: 10px;
         font-size: 16px;
+        letter-spacing: .5px;
         background-color: var(--purple-light-color);
         &:hover{
             cursor: pointer;
             opacity: .9;
         }
+    }
+}
+
+// RESPONSIVE STYLES
+
+@media only screen and (max-width:1036px){
+    .region-card{
+        height: 137px;
+        padding: 30px 16px;
+        .card-info{
+            row-gap: 5px;
+            h5{
+                font-size: 18px;
+            }
+            p{
+                font-size: 13px;
+            }
+        }
+        .view-btn{
+        padding: .8rem 2.5rem;
+        }
+    }
+}
+
+
+@media only screen and (max-width:980px){
+    .traffic__item-header{
+        justify-content: space-between !important;
+        .traffic-text{
+            flex: content;
+            margin-left: 3rem;
+        }
+    }
+    .traffic__device-wrapper > .card-item{
+        column-gap: 10px;
+        margin-top: 20px;
+       
+        p{
+            font-size: 16px;
+        }
+        .progress{
+            max-width: 450px;
+            width: 100%;
+        }
+    }
+    
+}
+
+
+@media only screen and (max-width:760px){
+    .traffic__item-header{
+        .traffic-text{
+            margin-left: 0rem;
+        }
+    }
+    .traffic__device-wrapper > .card-item{
+        column-gap: 30px;
+        margin-top: 25px;
+       
+        p{
+            font-size: 15px;
+        }
+      
     }
 }
