@@ -1,11 +1,12 @@
 .dashboard{
     display: flex;
     align-items: center;
-    column-gap: 30px;
+    column-gap: 10px;
 }
 .dashboard-content{
     width: 100%;
     height: 100vh;
+    overflow-y: auto;
     padding: 20px 30px;
 }
 .content__main-wrapper{

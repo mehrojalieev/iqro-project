@@ -2,6 +2,7 @@ import DailyOverview from "../../../components/daily-overview/DailyOverview"
 import Navbar from "../../../components/navbar/Navbar"
 import Performance from "../../../components/performance/Performance"
 import SessionDevice from "../../../components/session-device/SessionDevice"
+import TrafficDevice from "../../../components/traffic-device/TrafficDevice"
 import "./DashboardHome.scss"
 
 const DashboardHome = () => {
@@ -12,6 +13,7 @@ const DashboardHome = () => {
             <Performance/>
             <SessionDevice/>
             <DailyOverview/>
+            <TrafficDevice/>
 
         </div>
     </div>

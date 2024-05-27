@@ -1,5 +1,5 @@
 .daily-overview{
-    margin-top: 2rem;
+    // margin-top: 2rem;
     max-width: 650px !important;
     width: 100% !important;
 }
@@ -13,13 +13,12 @@
 }
 
 .action-card{
-    max-width: 130px !important;
     width: 100%;
     padding: 20px;
     background-color: var(--light-color);
     border-radius: 10px;
     .image{
-        width: 50px;
+        width: 47px;
         aspect-ratio: 1/1;
         border-radius: 10px;
         display: flex;
@@ -29,13 +28,13 @@
     }
     .card-title{
         color: var(--secondary-dark-color);
-        font-size: 14px;
+        font-size: 13px;
         white-space: nowrap;
-        font-weight: 700;
+        font-weight: 600;
         margin-top: 2rem;
     }
     .card-count{
-        font-size: 24px;
+        font-size: 20px;
         font-weight: 500;
         margin-top: 10px;
     }
@@ -49,7 +48,7 @@
 }
 
 .export__card-wrapper{
-    margin-top: 40px;
+    margin-top: 60px;
     width: 100%;
 }
 .export__card-header{
@@ -99,13 +98,13 @@
     background-color: var(--light-color);
     .today-info{
         h5{
-            font-size: 24px;
+            font-size: 22px;
             font-weight: 500;
             color: var(--purple-dark-color);
         }
         p{
             margin-top: 10px;
-            font-size: 14px;
+            font-size: 13px;
             font-weight: 700;
             color: #5A5881;
 
