@@ -3,6 +3,7 @@ import Group from '../../assets/images/group.svg'
 import Time from '../../assets/images/time.svg'
 import Rate from '../../assets/images/rate.svg'
 import Duration from '../../assets/images/duration.svg'
+import { Progress } from "antd"
 
 
 const DailyOverview = () => {
@@ -65,6 +66,38 @@ const DailyOverview = () => {
                 </div>
                 )
             }
+        </div>
+        <div className="export__card-wrapper">
+            <div className="export__card-header">
+                <h3>Daily Overview</h3>
+                <button className="export-btn">Export</button>
+            </div>
+            <div className="card-contains">
+                    <div className="export-card">
+                            <div className="today-info">
+                                <h5>5,461</h5>
+                                <p>Today</p>
+                            </div>
+                            <Progress type="dashboard" percent={80}/>
+                            <p className="progress-text">Users</p>
+                            <div className="today-info">
+                                <h5>8,085</h5>
+                                <p>Expected</p>
+                            </div>
+                    </div>
+                    <div className="export-card">
+                            <div className="today-info">
+                                <h5>140</h5>
+                                <p>Today</p>
+                            </div>
+                            <Progress type="dashboard" percent={80}/>
+                            <p className="goal-text">Goals</p>
+                            <div className="today-info">
+                                <h5>120</h5>
+                                <p>Expected</p>
+                            </div>
+                    </div>
+            </div>
         </div>
     </div>
   )

@@ -1,6 +1,7 @@
 import DailyOverview from "../../../components/daily-overview/DailyOverview"
 import Navbar from "../../../components/navbar/Navbar"
 import Performance from "../../../components/performance/Performance"
+import SessionDevice from "../../../components/session-device/SessionDevice"
 import "./DashboardHome.scss"
 
 const DashboardHome = () => {
@@ -9,8 +10,9 @@ const DashboardHome = () => {
         <Navbar/>
         <div className="content__main-wrapper">
             <Performance/>
-            <div></div>
+            <SessionDevice/>
             <DailyOverview/>
+
         </div>
     </div>
   )
