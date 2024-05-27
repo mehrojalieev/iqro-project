@@ -10,35 +10,61 @@ const Performance = () => {
         labels: ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'],
         datasets: [{
             label: "Users",
-            data: [13000, 11000, 15000, 11000, 12500, 9800, 9000, 12700, 9000, 14500, 13000, 13500],
-            // backgroundColor: 'none',
+            data: [13000, 10000, 18000, 10000, 13500, 8000, 13000, 8000, 12000, 17000, 10000, 13000],
             borderColor: '#563bff',
             pointBorderColor: '#563bff',
             fill: true,
             borderWidth: 4,
             tension: 0.5
-        }]
+        }],
+
     }
 
 
-    type option = {
-        plugins: {
-            legend: Boolean
-        },
+    interface Option {
+        plugins?: {
+            legend?: boolean;
+        };
         scales?: {
-            y: { min: Number, max: Number }
-        }
+            x?: {
+                grid?: {
+                    display?: boolean;
+                };
+            };
+            y?: {
+                min?: number;
+                max?: number;
+                ticks?: {
+                    display?: boolean;
+                };
+                grid?: {
+                    display?: boolean;
+                };
+            };
+        };
     }
 
 
-    const options: option = {
+    const options: Option = {
         plugins: {
             legend: true
         },
+        
         scales: {
-
-            y: { min: 100, max: 25000 }
-        }
+            x: {
+                grid: {
+                    display: false, 
+                },
+            },
+            y: { min: 100, max: 25000,
+                grid: {
+                    display: false
+                },
+                    ticks: {
+                        display: false
+                    }
+            },
+        },
     }
 
     return (
@@ -47,11 +73,17 @@ const Performance = () => {
                 <h3 className="header-title">Performance</h3>
                 <h6 className="header-subtitle">Year</h6>
             </div>
-                <div className="performance__chart-container">
-                    <Line data={chartData} options={options as option}>
+            <div className="performance__chart-container">
+                {/* <Line  data={chartData} options={options as option}> */}
+                <Line
+                    redraw={false}
+                    updateMode="none"
+                    data={chartData}
+                    options={options as any}
+                >
 
-                    </Line>
-                </div>
+                </Line>
+            </div>
         </div>
     )
 }

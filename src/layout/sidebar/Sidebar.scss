@@ -54,8 +54,19 @@
 }
 
 .item-link--active{
+    position: relative;
     background-color: var(--purple-light-color);
-.link-icon, .link-text{
+    &::before{
+        position: absolute;
+        content: '';
+        // left: 1%;
+        right: calc(100% + 20px);
+        height: 80%;
+        width: 3px ;
+        top: 10%;
+        background-color: #3734A9;
+    }
+    .link-icon, .link-text{
     color: var(--light-color);
 }
 }

@@ -4,6 +4,8 @@ import Session from "../../assets/images/session.svg"
 const SessionDevice = () => {
   return (
     <div className="session-device">
+        <div className="session__device-wrapper">
+
         <div className="session__device-header">
             <h3>Sessions By Device</h3>
             <p>year</p>
@@ -25,6 +27,8 @@ const SessionDevice = () => {
                     </div>
             </div>
         </div>
+        </div>
+      
     </div>
   )
 }
