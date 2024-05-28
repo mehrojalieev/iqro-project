@@ -1,6 +1,5 @@
 .session-device{
     width: 100%;
-    // max-width: 514px;
 
 }
 .session__device-header{
@@ -35,6 +34,21 @@
     }
 }
 
+
+.session__progress-chart{
+    position: relative;
+    .orange-progress{
+        position: absolute;
+        top: 13%;
+        left: 13%;
+    }
+    .green-progress{
+        position: absolute;
+        top: 25%;
+        left: 27%;
+    }
+}
+
 .session__card-content{
     .content-item{
         margin-top: 20px;
@@ -56,6 +70,8 @@
         }
     }
 }
+
+
 
 
 
@@ -219,3 +235,38 @@
         }
     }
 }
+
+@media only screen and (max-width:440px){
+    .session__device-header{
+        h3{
+            font-size: 18px;
+        }
+        p{
+            font-size: 14px;
+        }   
+    }
+    .session-card{
+        padding: 15px 10px;
+        .session-image{
+            max-width: 150px;
+        }
+    }
+    .session__card-content{
+        margin-top: 1.5rem;
+        .content-item{
+            margin-top: 8px;
+            p{
+                font-size: 14px;
+            }
+            h6{
+                margin-top: 6px;
+                font-size:16px;
+                sub{
+                    font-size: 12px;
+                }
+            }
+        }
+    }
+}
+
+

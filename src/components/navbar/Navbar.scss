@@ -42,6 +42,55 @@
 @media only screen and (max-width:542px){
     .search-form{
         max-width: 220px;
-        
     }
+    .navbar-action{
+        column-gap: 20px;
+        .email-icon{
+            font-size: 20px;
+            color: var(--secondary-dark-color);
+        }
+        .badge{
+            font-size: 18px !important;
+          
+            .ant-badge-count{
+                font-size: 12px !important;
+            }
+            span{
+                font-size: 20px;
+                color: var(--secondary-dark-color);
+            }
+        }
+        .avatar{
+            width: 23px;
+        }
+        .ant-scroll-number{
+            padding: 0 !important;
+            width: 1px !important;
+        }
+        .ant-scroll-number-only-unit{
+            font-size: 15px !important;
+        }
+    }
+}
+
+@media only screen and (max-width:430px){
+.navbar-header{
+    flex-direction: column-reverse;
+    align-items: flex-end;
+}
+.search-form{
+    margin-top: 1rem;
+    max-width: 100%;
+}
+}
+@media only screen and (max-width:430px){
+
+.search-form{
+    margin-top: 1rem;
+    max-width: 100%;
+    height: 30px;
+}
+.ant-input-affix-wrapper{
+    height: 36px !important;
+}
 }

@@ -15,8 +15,13 @@
 .action-card {
     width: 100%;
     padding: 20px;
+    transition: .2s;
     background-color: var(--light-color);
     border-radius: 10px;
+    &:hover{
+        cursor: pointer;
+        box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+    }
 
     .image {
         width: 47px;
@@ -348,6 +353,126 @@
         }
         .goal-text {
             left: 44%;
+        }
+       }
+    }
+}
+
+@media only screen and (max-width:440px){
+    .action__card-wrapper{
+        grid-template-columns: 1fr;
+    }
+    .action-card {
+        padding: 20px 10px;
+        .image {
+            width: 70px;    
+            img {
+                width: 30px;
+            }
+        }
+        .card-title {
+            margin-top: 14px;
+            font-size: 17px;
+        }
+
+        .card-count {
+            font-size: 28px;
+        }
+
+        .card-percent {
+            font-size: 16px;
+        }
+    }
+    
+    .card-contains {
+        margin-top: .8rem;
+       .export-card{
+        .today-info {
+            h5 {
+                font-size: 18px;
+            }
+            p {
+                margin-top: 5px;
+                font-size: 13px;
+
+            }
+        }
+        .ant-progress-inner {
+            width: 70px !important;
+            aspect-ratio: 1/1 !important;
+        }
+
+        .progress-text {
+            top: 34%;
+            left: 44%;
+            font-size: 14px;
+        }
+        .goal-text {
+            left: 42%;
+        }
+       }
+    }
+}
+
+
+@media only screen and (max-width:394px){
+    .action-card {
+        padding: 15px 10px;
+        .image {
+            width: 60px;    
+            img {
+                width: 25px;
+            }
+        }
+        .card-title {
+            margin-top: 14px;
+            font-size: 16px;
+        }
+
+        .card-count {
+            font-size: 25px;
+        }
+
+        .card-percent {
+            font-size: 15px;
+        }
+    }
+}
+
+
+@media only screen and (max-width:378px){
+    .export__card-header{
+        .export-btn{
+            padding: 12px 20px;
+            font-size: 14px;
+        }
+    }
+    .card-contains {
+        margin-top: .3rem;
+        padding: 1rem 0;
+       .export-card{
+        .today-info {
+            h5 {
+                font-size: 16px;
+            }
+            p {
+                margin-top: 2px;
+                font-size: 13px;
+
+            }
+        }
+        .ant-progress-inner {
+            margin-top: 22px;
+            width: 60px !important;
+        }
+
+        .progress-text {
+            top: 39%;
+            left: 43%;
+            font-size: 13px;
+        }
+        .goal-text {
+            left: 42%;
         }
        }
     }
