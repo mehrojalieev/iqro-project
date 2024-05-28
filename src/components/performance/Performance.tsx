@@ -11,9 +11,6 @@ const Performance = () => {
     const chartLine: any = useRef(null)
     const [screenWidth, setScreenWidth] = useState<number>()
 
-    console.log(screenWidth);
-    
-
     const GetScreenWidth = () => {
         setScreenWidth(window.innerWidth)
     }
