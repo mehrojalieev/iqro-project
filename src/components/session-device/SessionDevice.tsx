@@ -1,7 +1,22 @@
+import { useEffect, useState } from "react"
 import "./SessionDevice.scss"
-import Session from "../../assets/images/session.svg"
+import { Progress } from "antd"
 
 const SessionDevice = () => {
+
+    const [screenWidth, setScreenWidth] = useState<any>()
+
+    const handleChangeWidth = () => {
+        setScreenWidth(window.innerWidth)
+    }
+
+    useEffect(() => {
+        window.addEventListener('resize', handleChangeWidth)
+        return  () => {
+            window.removeEventListener('resize', handleChangeWidth)
+        }
+    }, [])
+
   return (
     <div className="session-device">
         <div className="session__device-wrapper">
@@ -11,7 +26,11 @@ const SessionDevice = () => {
             <p>year</p>
         </div>
         <div className="session-card">
-            <img className="session-image" src={Session} alt="Session Device" />
+            <div className="session__progress-chart">
+                    <Progress strokeWidth={screenWidth < 400 ? 5 : 6} width={ screenWidth < 400 ? 165 : 190} strokeColor={'#563bff'} className="blue-progress" percent={75} type="circle"/>
+                    <Progress strokeWidth={screenWidth < 400 ? 5 : 6} width={ screenWidth < 400 ? 120 : 140} strokeColor={'#ff7049'} className="orange-progress" percent={40} type="circle"/>
+                    <Progress strokeWidth={screenWidth < 400 ? 8 : 9} width={ screenWidth < 400 ? 75 : 90} strokeColor={'#20c997'} className="green-progress" percent={30} type="circle"/>
+            </div>
             <div className="session__card-content">
                     <div className="content-item">
                         <p>Desktop</p>

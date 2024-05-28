@@ -1,13 +1,30 @@
 import "./Performance.scss"
 import { Line } from "react-chartjs-2"
 import { Chart, LineElement, CategoryScale, LinearScale, PointElement, Legend, Tooltip } from 'chart.js'
-import { useEffect, useRef } from "react"
+import { useEffect, useRef, useState } from "react"
 
 Chart.register(LineElement, CategoryScale, LinearScale, PointElement, Legend, Tooltip)
 
 const Performance = () => {
+    // HOOKS
 
     const chartLine: any = useRef(null)
+    const [screenWidth, setScreenWidth] = useState<number>()
+
+    console.log(screenWidth);
+    
+
+    const GetScreenWidth = () => {
+        setScreenWidth(window.innerWidth)
+    }
+
+    useEffect(() => {
+        window.addEventListener('resize', GetScreenWidth)
+        return () => {
+            window.removeEventListener('resize', GetScreenWidth)
+        }
+    }, [])
+
 
     useEffect(() => {
         const ctx = chartLine.current?.chartInstance?.ctx;
@@ -25,8 +42,8 @@ const Performance = () => {
             borderColor: '#563bff',
             pointBorderColor: '#563bff',
             fill: true,
-            borderWidth: 4,
-            tension: 0.5
+            borderWidth: screenWidth as number < 451 ? 2.4 : 4,
+            tension: 0.6
         }],
 
     }
@@ -57,10 +74,9 @@ const Performance = () => {
 
 
     const options: Option = {
-        // plugins: {
-        //     legend: true
-        // },
-        
+        plugins: {
+            legend: true
+        },
         scales: {
             x: {
                 grid: {
@@ -102,7 +118,6 @@ const Performance = () => {
                 <h6 className="header-subtitle">Year</h6>
             </div>
             <div className="performance__chart-container">
-                {/* <Line  data={chartData} options={options as option}> */}
                 <Line ref={chartLine}
                     redraw={false}
                     updateMode="none"

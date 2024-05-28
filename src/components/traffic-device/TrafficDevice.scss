@@ -154,3 +154,46 @@
       
     }
 }
+
+
+@media only screen and (max-width:394px){
+    .traffic__device-wrapper{
+        padding: 1rem;
+        .card-subtitle{
+            font-size: 16px;
+        }
+    }
+    .traffic__item-header  p{
+            font-size: 13px !important;
+    }
+   
+    .traffic__device-wrapper > .card-item{
+        column-gap: 15px;
+        margin-top: 20px;
+       
+        p{
+            font-size: 14px;
+        }
+        .progress{
+            max-width: 450px;
+        }
+    }
+    .region-card{
+        margin-top: 1.5rem;
+        height: 100px;
+        padding: 20px 16px;
+        .card-info{
+            row-gap: 5px;
+            h5{
+                font-size: 16px;
+            }
+            p{
+                font-size: 12px;
+            }
+        }
+        .view-btn{
+            font-size: 15px;
+        padding: .6rem 2.2rem;
+        }
+    }
+}

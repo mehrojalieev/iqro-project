@@ -1,18 +1,13 @@
 import {  NavLink } from "react-router-dom"
 import "./Sidebar.scss"
 import {  MenuUnfoldOutlined } from "@ant-design/icons"
-import { useState } from "react"
-
-
 
 const Sidebar = () => {
 
-  const [openSidebar, setOpenSidebar] = useState<boolean>(false)
-
   return (
-    <div  className={ openSidebar ? "sidebar sidebar-open" : "sidebar"}>
+    <div  className="sidebar">
       <div className="sidebar-header">
-        <i onClick={() => setOpenSidebar(!openSidebar)} className="header-icon"><MenuUnfoldOutlined /></i>
+        <i  className="header-icon"><MenuUnfoldOutlined /></i>
       </div>
       <ul className="sidebar-menu">
         <li>
@@ -22,26 +17,32 @@ const Sidebar = () => {
           </NavLink>
         </li>
         <li>
-          <NavLink className={({isActive}) => isActive ? "item-link item-link--active" : "item-link"} to={'/s'}>
+          <NavLink className={({isActive}) => isActive ? "item-link item-link--active" : "item-link"} to={'manage-products'}>
           <span className="material-symbols-outlined link-icon">space_dashboard</span>
             <p className="link-text">Manage Products</p>
           </NavLink>
         </li>
         <li>
-          <NavLink className={({isActive}) => isActive ? "item-link item-link--active" : "item-link"} to={'/a'}>
+          <NavLink className={({isActive}) => isActive ? "item-link item-link--active" : "item-link"} to={'manage-users'}>
+          <span className="material-symbols-outlined link-icon">group</span>
+            <p className="link-text">Manage Users</p>
+          </NavLink>
+        </li>
+        <li>
+          <NavLink className={({isActive}) => isActive ? "item-link item-link--active" : "item-link"} to={'analytics'}>
           <span className="material-symbols-outlined link-icon">trending_up</span>
             <p className="link-text">Analytics</p>
           </NavLink>
         </li>
 
         <li>
-          <NavLink className={({isActive}) => isActive ? "item-link item-link--active" : "item-link"} to={'/a'}>
+          <NavLink className={({isActive}) => isActive ? "item-link item-link--active" : "item-link"} to={'store'}>
           <span className="material-symbols-outlined link-icon">database</span>
             <p className="link-text">Store</p>
           </NavLink>
         </li>
         <li>
-          <NavLink className={({isActive}) => isActive ? "item-link item-link--active" : "item-link"} to={'/a'}>
+          <NavLink className={({isActive}) => isActive ? "item-link item-link--active" : "item-link"} to={'settings'}>
           <span className="material-symbols-outlined link-icon">settings</span>
             <p className="link-text">Settings</p>
           </NavLink>
